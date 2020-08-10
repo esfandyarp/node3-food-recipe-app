@@ -1,12 +1,15 @@
-<html>
+<!doctype html>
+<html lang="en">
+    
     <head>
         <title>{{title}}</title>
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
 
     <body>
-        <div class="main-content">
-         {{>header}}
+        {{>header}}
+        <div class="container flex-grow-1">
          {{success}}
          <p>{{listLength}} recipes available</p>
             <ul class="recipe_list">
@@ -19,6 +22,6 @@
       </div>
 
       {{>footer}}
-
+      {{>bootstrapJS}}
     </body>
 </html>
