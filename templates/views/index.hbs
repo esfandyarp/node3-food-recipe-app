@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <div class="main-content">
+         {{>header}}
+         {{success}}
+         <p>{{listLength}} recipes available</p>
+            <ul class="recipe_list">
+            {{#each files}}
+                <li>
+                <a href="{{this.url}}">{{this.name}}</a> 
+                </li>
+            {{/each}}
+            </ul>
+      </div>
+
+      {{>footer}}
+
+    </body>
+</html>

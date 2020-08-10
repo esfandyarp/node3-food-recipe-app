@@ -1,0 +1,24 @@
+<html>
+      <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/css/styles.css">
+     </head>
+
+    <body>
+      <div class="main-content">
+        {{>header}}
+        {{message}}
+        <div class="uploader">
+      <form action="/up/pdf" 
+          enctype="multipart/form-data"
+        method="post">
+        <input type="file" class="file" value="Select PDF file to upload" name="pdf">
+        <input type="submit" class="submit" value="Send" name="submit">
+    </form>
+     </div>
+      </div>
+
+      {{>footer}}
+         
+    </body>
+  </html>
