@@ -45,6 +45,13 @@ app.get('/', (req, res) => {
     })
 })
 
+app.get('/help', (req, res) => {
+    res.render('help', {
+        title: "Help",
+        name: "Esfandyar Poozesh"
+    })
+})
+
 app.get('/upload', (req, res) => {
     res.render('upload', {
         title: 'Upload New Recipe',
@@ -61,9 +68,7 @@ app.post('/up/pdf', function(req, res) {
         }
         console.log('Uploaded');
         // res.end('Success!');
-        res.redirect('/upload', {
-            message: "Upload was successful!"
-        })
+        res.redirect('/upload')
     });
 });
 
