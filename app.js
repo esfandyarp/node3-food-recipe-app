@@ -37,6 +37,7 @@ app.get('/', (req, res) => {
             url: `/pdfs/${name}`
         };
     })
+
     res.render('index', {
         files,
         title: 'Poozman Recipes',
@@ -53,22 +54,27 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/upload', (req, res) => {
+    let message = 'Select file to upload'
     res.render('upload', {
         title: 'Upload New Recipe',
-        name: 'Esfandyar Poozesh'
+        name: 'Esfandyar Poozesh',
     })
 })
 
 app.post('/up/pdf', function(req, res) {
-    console.log('Uploading...')
     upload(req, res, function(err) {
         if (err) {
-            console.log('Failed');
-            res.end('Failed!');
+            res.render('upload', {
+                title: 'Upload New Recipe',
+                name: 'Esfandyar Poozesh',
+                messageFail: 'Upload failed. Please try again.'
+            })
         }
-        console.log('Uploaded');
-        // res.end('Success!');
-        res.redirect('/upload')
+            res.render('upload', {
+                title: 'Upload New Recipe',
+                name: 'Esfandyar Poozesh',
+                messageSuccess: 'Upload Successful.'
+        })
     });
 });
 

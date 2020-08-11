@@ -1,15 +1,22 @@
-<html>
+<!doctype html>
+<html lang="en">
+
       <head>
         <title>{{title}}</title>
         <link rel="stylesheet" href="/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      </head>
 
     <body>
       {{>header}}
       <div class="container">
-        
-        {{message}}
-        <div class="form-group">
+      {{#if messageFail}}
+      {{>messagefail}}
+      {{/if}}
+      {{#if messageSuccess}}
+      {{>messagesuccess}}
+      {{/if}}
+        <div>
       <form action="/up/pdf" 
           enctype="multipart/form-data"
         method="post">
