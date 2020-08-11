@@ -10,20 +10,28 @@
     <body>
       {{>header}}
       <div class="container">
-      {{#if messageFail}}
-      {{>messagefail}}
-      {{/if}}
-      {{#if messageSuccess}}
-      {{>messagesuccess}}
-      {{/if}}
-        <div>
-      <form action="/up/pdf" 
-          enctype="multipart/form-data"
-        method="post">
-        <input type="file" class="file" value="Select PDF file to upload" name="pdf">
-        <input type="submit" class="submit" value="Upload" name="submit">
-    </form>
-     </div>
+        {{#if messageFail}}
+        {{>messagefail}}
+        {{/if}}
+        {{#if messageSuccess}}
+        {{>messagesuccess}}
+        {{/if}}
+
+        <div class="card text-center bd-highlight">
+          <div class="card-header">
+            Upload Files
+          </div>
+          <div class="card-body">
+          <div class="form-group">
+            <form action="/up/pdf" enctype="multipart/form-data" method="post">
+              <input type="file" class="file" value="Select PDF file to upload" name="pdf">
+              <input type="submit" class="submit" value="Upload" name="submit">
+            </form>
+          </div>           
+          </div>
+        </div>
+
+
       </div>
 
       {{>footer}}

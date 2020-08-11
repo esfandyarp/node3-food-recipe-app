@@ -12,11 +12,12 @@
         <div class="container">
          {{success}}
          <p>{{listLength}} recipes available</p>
+
             <ul class="recipe_list">
             {{#each files}}
-                <li>
+              <li>
                 <h4><a href="{{this.url}}">{{this.name}}</a></h4>
-                </li>
+              </li>
             {{/each}}
             </ul>
       </div>
