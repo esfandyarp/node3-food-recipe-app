@@ -7,7 +7,7 @@ This application was created in order to make accessing recipes easy.  Ideally, 
 1.  Run `npm install` to install all modules.
 2.  Run application using `node app.js` or `nodemon app.js`.
 
-Access application on [http://localhost:3000] (http://localhost:3000)
+Access application on [http://localhost:3000](http://localhost:3000)
 
 # Coming Soon
 
