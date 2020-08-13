@@ -7,7 +7,11 @@ This application was created in order to make accessing recipes easy.  Ideally, 
 1.  Run `npm install` to install all modules.
 2.  Run application using `node app.js` or `nodemon app.js`.
 
-Access application on [http://localhost:3000](http://localhost:3000)
+Access application on [localhost:3000](http://localhost:3000)
+
+# Use
+
+Currently, the upload feature accepts all file types.  Eventually, only PDF format will be accepted.  When uploading, file will be uploaded to the `/public/pdfs` directory. 
 
 # Coming Soon
 
@@ -15,3 +19,4 @@ Access application on [http://localhost:3000](http://localhost:3000)
 - When uploading, user can upload any file type.  Will change to only allow PDF.
 - Clean up upload success/fail dialog.
 - Decide wether to continue using boostrap for styling or bake one from scratch.
+- File deletion
