@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Esfandyar Poozesh",
   "license": "ISC",
   "dependencies": {
     "@uppy/core": "^1.12.2",
